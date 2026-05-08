@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIODATA IRPAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="container-navbar">
+        <div class="title-navbar">
+            <a href="index.html">BIODATA</a>
+        </div>
+        <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="ul-navbar" id="ul-navbar">
+                <li class="li-navbar active"><a href="index.html">Home</a></li>
+                <li class="li-navbar"><a href="about.html">About</a></li>
+                <li class="li-navbar"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten utama: teks kiri, foto kanan -->
+    <div class="home-content">
+
+        <!-- Teks Perkenalan -->
+        <div class="container-perkenalan">
+            <h1 class="h1-text">
+                Hi, I'am&nbsp;<span class="highlight-name">Irpan</span>
+            </h1>
+            <h2 class="h3-navbar1">I'am a student at IAHN University</h2>
+            <p class="h3-navbar2">Saya memiliki semangat tinggi dalam mempelajari teknologi dan terus berkontribusi dalam dunia digital yang terus berkembang. Saya percaya bahwa setiap proses belajar adalah langkah menuju masa depan yang lebih baik.</p>
+        </div>
+
+        <!-- Foto -->
+        <div class="container-img">
+            <img src="me photo Irpan.jpeg" class="img-content" alt="Foto Irpan">
+        </div>
+
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('ul-navbar');
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

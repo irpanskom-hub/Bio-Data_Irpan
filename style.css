@@ -1,0 +1,366 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #062B1C;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+/* NAVBAR/MENU-MENU */
+
+.container-navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+.title-navbar a {
+    font-weight: bold;
+    font-size: 36px;
+    color: #f5f0e1;
+    text-decoration: none;
+}
+
+.ul-navbar {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.li-navbar {
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.li-navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.li-navbar a:hover,
+.li-navbar.active a {
+    color: #87AE73;
+}
+
+.li-navbar.active a {
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
+}
+
+/* HAMBURGER/GARIS 3 CUMAN MUNCUL DI HP */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #f5f0e1;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* MENU HOME */
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 120px;
+    height: calc(100vh - 100px);
+}
+
+.container-perkenalan {
+    max-width: 580px;
+    font-size: 15px;
+}
+
+.h1-text {
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.highlight-name {
+    color: #87AE73;
+    font-weight: bold;
+}
+
+.h3-navbar1 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.h3-navbar2 {
+    text-align: left;
+    line-height: 1.7;
+    color: white;
+    font-weight: 180;
+}
+
+.container-img {
+    flex-shrink: 0;
+}
+
+.img-content {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+/* MENU ABOUT */
+
+.about1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 40px;
+    left: 40px;
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 70px;
+    max-width: 300px;
+    font-size: 13px;
+    color: white;
+}
+
+.judul-tentang {
+    color: #87AE73;
+    font-size: 17px;
+}
+
+.warna-judul {
+    color: #87AE73;
+}
+
+.intro-text {
+    position: relative;
+    top: -150px;
+    left: 450px;
+    color: white;
+    font-size: 15px;
+}
+
+.intro-text1 {
+    position: relative;
+    top: -350px;
+    left: 850px;
+    color: white;
+    font-size: 15px;
+}
+
+.section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.section-list-Study {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* MENU CONTACT */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    padding-left: 120px;
+    color: white;
+    justify-content: center;
+}
+
+.intro-contact {
+    position: absolute;
+    font-size: 30px;
+    color: #87AE73;
+    top: 190px;
+}
+
+.text-intro {
+    position: absolute;
+    line-height: 1.8;
+    font-size: 16px;
+    text-align: justify;
+    max-width: 700px;
+    top: 240px;
+}
+
+.social-icons {
+    position: absolute;
+    display: flex;
+    gap: 25px;
+    top: 390px;
+    left: 120px;
+}
+
+.social-icons a {
+    font-size: 26px;
+    color: #87AE73;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE HP/MOBILE */
+
+@media  (max-width: 768px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .container-navbar {
+        height: auto;
+        padding: 16px 20px;
+        position: relative;
+    }
+
+    .title-navbar a {
+        font-size: 24px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .ul-navbar {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #062B1C;
+        border-top: 1px solid #87AE73;
+        z-index: 99;
+        padding: 10px 0;
+        gap: 0;
+    }
+
+    .ul-navbar.open {
+        display: flex;
+    }
+
+    .li-navbar {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .home-content {
+        flex-direction: column-reverse;
+        padding: 24px 20px;
+        height: auto;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .container-perkenalan {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .h1-text {
+        font-size: 22px;
+    }
+
+    .h3-navbar1 {
+        font-size: 16px;
+    }
+
+    .img-content {
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .container-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about1 {
+        position: static;
+        max-width: 100%;
+        margin: 20px 24px 0;
+    }
+
+    .intro-text {
+        position: static;
+        padding: 20px 24px 10px;
+        top: unset;
+        left: unset;
+    }
+
+    .intro-text1 {
+        position: static;
+        padding: 10px 24px 30px;
+        top: unset;
+        left: unset;
+    }
+
+    .contact {
+        height: auto;
+        padding: 24px;
+    }
+
+    .intro-contact {
+        position: static;
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
+
+    .text-intro {
+        position: static;
+        max-width: 100%;
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.7;
+    }
+
+    .social-icons {
+        position: static;
+        margin-top: -15px;
+        flex-wrap: wrap;
+    }       
+}
